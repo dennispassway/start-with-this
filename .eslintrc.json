@@ -9,6 +9,7 @@
     "compat"
   ],
   "env": {
+    "browser": true,
     "jest": true
   },
   "rules": {
