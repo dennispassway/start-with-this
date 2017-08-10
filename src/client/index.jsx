@@ -7,8 +7,8 @@ import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { BrowserRouter } from 'react-router-dom'
 
-import App from '../shared/app'
-import { APP_CONTAINER_SELECTOR } from '../shared/config'
+import App from 'shared/App'
+import { APP_CONTAINER_SELECTOR } from 'shared/config'
 
 const rootEl = document.querySelector(APP_CONTAINER_SELECTOR)
 
@@ -26,7 +26,7 @@ if (module.hot) {
   // flow-disable-next-line
   module.hot.accept('../shared/app', () => {
     // eslint-disable-next-line global-require
-    const NextApp = require('../shared/app').default
+    const NextApp = require('../shared/App').default
     ReactDOM.render(wrapApp(NextApp), rootEl)
   })
 }

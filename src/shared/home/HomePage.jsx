@@ -3,7 +3,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-import { APP_NAME } from '../../config'
+import { APP_NAME } from 'shared/config'
+import Button from 'shared/component/Button'
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
         ]}
       />
       <h1>{APP_NAME}</h1>
+      <Button onClick={_ => _}>Button</Button>
     </div>
   )
 }

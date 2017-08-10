@@ -19,6 +19,9 @@
     "compat/compat": 2
   },
   "settings": {
-    "polyfills": ["fetch"]
+    "polyfills": ["fetch"],
+    "import/resolver": {
+      "babel-module": {}
+    }
   }
 }

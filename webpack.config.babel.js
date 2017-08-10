@@ -4,7 +4,7 @@ import path from 'path'
 import webpack from 'webpack'
 
 import { WDS_PORT } from './src/shared/config'
-import { isProd } from './src/shared/util'
+import { isProd } from './src/shared/utils'
 
 export default {
   entry: [

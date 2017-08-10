@@ -5,9 +5,9 @@ import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import { StaticRouter } from 'react-router'
 
-import App from './../shared/app'
-import { APP_CONTAINER_CLASS, STATIC_PATH, WDS_PORT } from '../shared/config'
-import { isProd } from '../shared/util'
+import App from 'shared/App'
+import { APP_CONTAINER_CLASS, STATIC_PATH, WDS_PORT } from 'shared/config'
+import { isProd } from 'shared/utils'
 
 export default function renderApp(location: string, routerContext: ?Object = {}) {
   const head = Helmet.rewind()

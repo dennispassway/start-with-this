@@ -3,10 +3,10 @@
 import React from 'react'
 
 type Props = {
-  label: string,
-  handleClick: Function,
+  children: any,
+  onClick: Function,
 };
 
-export default function Button({ label, handleClick }: Props) {
-  return <button onClick={handleClick}>{label}</button>
+export default function Button({ children, onClick }: Props) {
+  return <button onClick={onClick}>{children}</button>
 }

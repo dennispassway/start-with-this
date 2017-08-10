@@ -5,6 +5,9 @@
     "react"
   ],
   "plugins": [
-    "flow-react-proptypes"
+    "flow-react-proptypes",
+    ["module-resolver", {
+      "root": ["./src"]
+    }]
   ]
 }
