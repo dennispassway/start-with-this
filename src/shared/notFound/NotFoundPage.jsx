@@ -4,11 +4,11 @@ import Helmet from 'react-helmet'
 import injectSheet from 'react-jss'
 import React from 'react'
 
-const styles = {
+const styles = ({ primaryColor }) => ({
   title: {
-    color: 'hotpink',
+    color: primaryColor,
   },
-}
+})
 
 const title = 'Page Not Found'
 
