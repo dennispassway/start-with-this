@@ -20,12 +20,7 @@ export default {
   module: {
     rules: [
       { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['postcss-loader'],
-        }),
-      },
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] },
     ],
   },
   devtool: isProd ? false : 'source-map',

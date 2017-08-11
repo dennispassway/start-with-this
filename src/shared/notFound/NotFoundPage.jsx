@@ -1,13 +1,18 @@
 // @flow
 
-import React from 'react'
 import Helmet from 'react-helmet'
+import injectSheet from 'react-jss'
+import React from 'react'
 
-import styles from './NotFoundPage.css'
+const styles = {
+  title: {
+    color: 'hotpink',
+  },
+}
 
 const title = 'Page Not Found'
 
-export default function NotFoundPage() {
+function NotFoundPage({ classes }: { classes: Object }) {
   return (
     <div>
       <Helmet
@@ -17,7 +22,9 @@ export default function NotFoundPage() {
           { property: 'og:title', content: title },
         ]}
       />
-      <h1 className={styles.title}>{title}</h1>
+      <h1 className={classes.title}>{title}</h1>
     </div>
   )
 }
+
+export default injectSheet(styles)(NotFoundPage)
