@@ -6,7 +6,7 @@ import { Route } from 'react-router-dom'
 import { Switch } from 'react-router'
 
 import HomePage from './home/HomePage'
-import Nav from './navigation/Nav'
+import Navigation from './navigation/Navigation'
 import NotFoundPage from './notFound/NotFoundPage'
 import { APP_NAME } from './config'
 import { HOME_PAGE_ROUTE } from './routes'
@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div>
       <Helmet titleTemplate={`%s | ${APP_NAME}`} defaultTitle={APP_NAME} />
-      <Nav />
+      <Navigation />
       <Switch>
         <Route exact path={HOME_PAGE_ROUTE} render={() => <HomePage />} />
         <Route component={NotFoundPage} />

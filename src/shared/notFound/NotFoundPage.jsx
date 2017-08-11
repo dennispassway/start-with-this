@@ -3,6 +3,8 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
+import styles from './NotFoundPage.css'
+
 const title = 'Page Not Found'
 
 export default function NotFoundPage() {
@@ -15,7 +17,7 @@ export default function NotFoundPage() {
           { property: 'og:title', content: title },
         ]}
       />
-      <h1>{title}</h1>
+      <h1 className={styles.title}>{title}</h1>
     </div>
   )
 }

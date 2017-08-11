@@ -1,5 +1,6 @@
 // @flow
 
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import path from 'path'
 import webpack from 'webpack'
 
@@ -19,6 +20,12 @@ export default {
   module: {
     rules: [
       { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['postcss-loader'],
+        }),
+      },
     ],
   },
   devtool: isProd ? false : 'source-map',
@@ -37,5 +44,6 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new ExtractTextPlugin('style.css'),
   ],
 }
