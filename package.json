@@ -23,6 +23,7 @@
     "> 1%"
   ],
   "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-polyfill": "^6.23.0",
     "compression": "^1.7.0",
     "css-loader": "^0.28.4",
