@@ -1,5 +1,3 @@
-// @flow
-
 import Helmet from 'react-helmet'
 import React from 'react'
 import { Route } from 'react-router-dom'

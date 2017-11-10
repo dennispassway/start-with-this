@@ -1,11 +1,9 @@
 {
   "presets": [
     "env",
-    "flow",
     "react"
   ],
   "plugins": [
-    "flow-react-proptypes",
     "transform-class-properties",
     ["module-resolver", {
       "root": ["./src"]

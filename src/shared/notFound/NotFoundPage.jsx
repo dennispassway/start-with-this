@@ -1,5 +1,3 @@
-// @flow
-
 import Helmet from 'react-helmet'
 import injectSheet from 'react-jss'
 import React from 'react'

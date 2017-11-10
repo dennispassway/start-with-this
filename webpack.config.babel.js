@@ -1,5 +1,3 @@
-// @flow
-
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import path from 'path'
 import webpack from 'webpack'

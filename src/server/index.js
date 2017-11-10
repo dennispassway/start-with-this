@@ -1,7 +1,6 @@
-// @flow
-
 import compression from 'compression'
 import express from 'express'
+import helmet from 'helmet'
 
 import { HOME_PAGE_ROUTE } from 'shared/routes'
 import { isProd } from 'shared/utils'
@@ -10,6 +9,7 @@ import { WEB_PORT, STATIC_PATH } from 'shared/config'
 import renderApp from './renderApp'
 
 const app = express()
+app.use(helmet())
 app.use(compression())
 app.use(STATIC_PATH, express.static('dist'))
 app.use(STATIC_PATH, express.static('public'))

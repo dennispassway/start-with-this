@@ -1,5 +1,3 @@
-// @flow
-
 import 'babel-polyfill'
 import 'normalize.css'
 
@@ -24,11 +22,9 @@ const wrapApp = AppComponent => (
 ReactDOM.render(wrapApp(App), rootEl)
 
 const jssServerSide = document.querySelector(JSS_SSR_SELECTOR)
-// flow-disable-next-line
 jssServerSide.parentNode.removeChild(jssServerSide)
 
 if (module.hot) {
-  // flow-disable-next-line
   module.hot.accept('../shared/App', () => {
     // eslint-disable-next-line global-require
     const NextApp = require('../shared/App').default

@@ -1,5 +1,3 @@
-// @flow
-
 export const APP_NAME = 'Application'
 export const STATIC_PATH = '/static'
 export const WDS_PORT = 7000
